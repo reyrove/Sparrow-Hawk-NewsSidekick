@@ -66,6 +66,12 @@ npm start
 
 Check out the live version at [news-sidekick.vercel.app](https://sparrow-hawk-news-sidekick.vercel.app/)
 
+<p align="center">
+  <img src="images/qr-code.png" alt="Sparrow Hawk QR Code" width="200">  
+  <br>
+  <em>(Scan this for best results)</em>
+</p>
+
 ## 📸 Screenshots
 
 | Desktop View | Mobile View |
