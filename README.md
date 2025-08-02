@@ -1,109 +1,89 @@
-# 🧠 News Sidekick — Powered by Sparrow Hawk AI 🦅
+# 🚀 Sparrow Hawk - News Sidekick
 
-**Your personal sidekick for all things hot & happening in Tech, AI, Crypto, Web3, Textile Engineering, and even some Fun shenanigans!**
-Just like your cool friend who knows *everything*, this web app serves you trending news in a clean, stylish, and categorized format.
+![Project Banner](images/sparrow-hawk.png)
 
-## 🌟 What Is This?
+Your AI-powered news aggregator that delivers the latest updates across tech, AI, crypto, Web3, textile engineering, and fun content in a stunning visual interface.
 
-News Sidekick is a stylish news dashboard powered by the **[NewsData API](https://newsdata.io/)** (you can also use [GNews.io](https://gnews.io) if you're looking for an alternative!).
-It pulls live news headlines based on smart categories and wraps it up in a beautiful, dark-themed UI that's as smart as it is sleek.
+## ✨ Features
 
-No more tab-switching across platforms — let your sidekick fetch it all for you in one dashboard.
+- **Beautiful Glassmorphism UI** with animated cards and smooth transitions
+- **Six News Categories**:
+  - 🤖 AI & Machine Learning
+  - 💻 Technology
+  - ₿ Crypto & Blockchain
+  - 🌐 Web3 & Decentralized Web
+  - � Textile Engineering
+  - 🎉 Fun & Entertainment
+- **Responsive Design** works on all devices
+- **Smart Caching** for faster loading
+- **Animated UI Elements** with hover effects
+- **Back-to-Top** floating button
+- **Error Handling** with retry functionality
 
----
+## 🛠 Tech Stack
 
-## 💻 Demo Categories
+- **Frontend**: 
+  - HTML5, CSS3 (with modern features like backdrop-filter)
+  - JavaScript (ES6+)
+  - Vercel for deployment
+- **Backend**:
+  - Node.js
+  - GNews API
+  - Serverless Functions
 
-| Category                | Icon | Example Queries                 |
-| ----------------------- | ---- | ------------------------------- |
-| Technology              | 🖥️  | `technology`                    |
-| Artificial Intelligence | 🤖   | `artificial intelligence OR AI` |
-| Crypto                  | 💰   | `crypto`                        |
-| Web3                    | 🌐   | `web3`                          |
-| Textile Engineering     | 🧵   | `textile engineering`           |
-| Fun & Entertainment     | 🎉   | `entertainment`                 |
+## 🎨 Design Highlights
 
----
+- **Neon Glow Effects** with CSS animations
+- **Glassmorphism Cards** with blur effects
+- **Category-Specific Color Schemes**
+- **Responsive Grid Layout**
+- **Smooth Scroll Animations**
+- **Interactive Navigation**
 
-## 🚀 Features
+## 🚀 Quick Start
 
-* 📡 **Live News** using NewsData.io or GNews API
-* 🎨 Fully Responsive & Gradient Dark UI
-* 🧊 Glassmorphism cards for sleek display
-* ✨ Smooth hover effects for max swag
-* 🔥 Each section is styled with unique color codes to match its vibe
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/news-sidekick.git
+```
 
----
+2. Install dependencies:
+```bash
+npm install
+```
 
-## 🛠️ How to Use
+3. Set up environment variables:
+```bash
+echo "GNEWS_API_KEY=your_api_key_here" > .env
+```
 
-1. **Clone this Repo**
+4. Run the development server:
+```bash
+npm start
+```
 
-   ```bash
-   git clone https://github.com/yourusername/news-sidekick.git
-   cd news-sidekick
-   ```
+## 🌐 Live Demo
 
-2. **Get Your Free API Key**
+Check out the live version at [news-sidekick.vercel.app](https://news-sidekick.vercel.app)
 
-   👉 Go to [https://gnews.io/](https://gnews.io/)
-   👉 Sign up and get a free API key (up to 100 requests/day — more than enough for casual usage!)
+## 📸 Screenshots
 
-3. **Plug in Your Key**
+| Desktop View | Mobile View |
+|--------------|-------------|
+| ![Desktop](images/screenshot1.png) | ![Mobile](images/screenshot2.png) |
 
-   In `script.js`, replace the placeholder:
+## 📝 Todo
 
-   ```js
-   const apiKey = 'YOUR_API_KEY_HERE';
-   ```
+- [ ] Add dark/light mode toggle
+- [ ] Implement search functionality
+- [ ] Add bookmarking feature
+- [ ] Create newsletter subscription
+- [ ] Add more news categories
 
-4. **Open `index.html` in your browser**
+## 🤝 Contributing
 
-   That’s it. News will start flowing in like gossip at a family reunion.
+Contributions are welcome! Please open an issue or submit a pull request.
 
----
+## 📜 License
 
-## 🔍 Tech Stack
-
-* HTML5 & CSS3 (Glassmorphism + Gradients = 💅)
-* JavaScript (Vanilla. Because frameworks are for the weak... jk.)
-* NewsData API (or use GNews for easy switch)
-
----
-
-## 📸 Screenshot
-
-![Preview](https://via.placeholder.com/900x500?text=Add+a+Screenshot+Here+for+Extra+Points)
-
----
-
-## 🙌 Credits
-
-Built with 💖 by [Reyrove](https://reyrove.github.io/Reyrove/)
-Design inspired by *every cool dev who likes their UIs spicy 🌶️*
-
----
-
-## 🧪 Bonus Tips
-
-* You can swap the API endpoint to GNews by replacing the `fetchNews()` URL logic.
-* Want more categories? Just copy-paste a `<section>` block and give it a query!
-* Style it your way — color palettes are modular per section.
-
----
-
-## ⚠️ Disclaimer
-
-This app depends on free-tier APIs. If it ever shows an error, you either:
-
-* Exceeded the quota (calm down, news addict)
-* Misspelled your API key (rookie move)
-* Or the API is temporarily down (sigh, servers...)
-
----
-
-## ✌️ Final Words
-
-So if you're tired of boring news apps or uninspired dashboards, **News Sidekick** has your back. It's smart, it’s sharp, and it’s got enough drip to make your dev buddies jealous.
-
-**Clone it. Fork it. Rock it.**
+Free, but Credit ME!
