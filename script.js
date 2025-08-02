@@ -1,4 +1,3 @@
-// News categories configuration
 const newsCategories = {
   technology: { query: 'technology', container: 'technologyNews' },
   ai: { query: 'artificial intelligence OR AI', container: 'aiNews' },
@@ -8,14 +7,12 @@ const newsCategories = {
   fun: { query: 'entertainment OR gaming', container: 'funNews' }
 };
 
-// Fetch and display all news
 function loadAllNews() {
   Object.values(newsCategories).forEach(({ query, container }) => {
     fetchNews(query, container);
   });
 }
 
-// Fetch news from our serverless function
 async function fetchNews(query, containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = '<div class="loading">Loading...</div>';
@@ -37,7 +34,6 @@ async function fetchNews(query, containerId) {
   }
 }
 
-// Display news cards
 function displayNews(articles, containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = '';
@@ -66,7 +62,6 @@ function displayNews(articles, containerId) {
   });
 }
 
-// Back-to-top button logic
 document.addEventListener('DOMContentLoaded', () => {
   loadAllNews();
   
