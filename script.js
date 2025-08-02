@@ -1,58 +1,44 @@
 const backToTopButton = document.querySelector('.back-to-top');
 
-async function fetchNews(query, containerId) {
+function fetchNews(query, containerId) {
   const container = document.getElementById(containerId);
-  container.innerHTML = `<div class="loading">Loading ${query} news...</div>`;
+  container.innerHTML = '<div class="loading">Loading...</div>';
 
-  try {
-    const response = await fetch('/api/news', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ query, lang: 'en' })
+  fetch(`/api/news?q=${encodeURIComponent(query)}`)
+    .then(r => r.json())
+    .then(data => displayNews(data.results || [], containerId))
+    .catch(err => {
+      console.error(`Error loading ${containerId}:`, err);
+      container.innerHTML = '<div class="error">Failed to load news. Try again later.</div>';
     });
-
-    if (!response.ok) throw new Error('Network response not ok');
-
-    const data = await response.json();
-
-    if (!data.results || data.results.length === 0) {
-      container.innerHTML = `<div class="error">No news found for ${query}</div>`;
-      return;
-    }
-
-    container.innerHTML = data.results.map(article => `
-      <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="news-card">
-        <img src="${article.image_url || 'images/default-news.png'}" alt="${article.title}" />
-        <h3>${article.title}</h3>
-        <p>${article.description || 'No description available.'}</p>
-        <span>Source: ${article.source_id || 'Unknown'}</span>
-      </a>
-    `).join('');
-
-  } catch (error) {
-    container.innerHTML = `<div class="error">Failed to load ${query} news. Try again later.</div>`;
-    console.error(`Error fetching ${query} news:`, error);
-  }
 }
 
+fetchNews('technology', 'technologyNews');
+fetchNews('artificial intelligence OR AI', 'aiNews');
+fetchNews('crypto', 'cryptoNews');
+fetchNews('web3', 'web3News');
+fetchNews('textile engineering', 'textileNews');
+fetchNews('entertainment', 'funNews');
 
-// Load news for all categories
-const categories = [
-  { query: 'technology', containerId: 'technologyNews' },
-  { query: 'ai', containerId: 'aiNews' },
-  { query: 'crypto', containerId: 'cryptoNews' },
-  { query: 'web3', containerId: 'web3News' },
-  { query: 'textile engineering', containerId: 'textileNews' },
-  { query: 'fun', containerId: 'funNews' },
-];
+function displayNews(articles, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
 
-categories.forEach(cat => fetchNews(cat.query, cat.containerId));
+  articles.forEach(article => {
+    const link = document.createElement('a');
+    link.href = article.link;
+    link.target = '_blank';
+    link.className = 'news-card';
+    link.innerHTML = `
+      <img src="${article.image_url || 'https://via.placeholder.com/300x180'}" alt="News image">
+      <h3>${article.title}</h3>
+    `;
+    container.appendChild(link);
+  });
+}
 
-// Back to top button logic
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
+  if (window.pageYOffset > 300) {
     backToTopButton.classList.add('visible');
   } else {
     backToTopButton.classList.remove('visible');
@@ -60,5 +46,8 @@ window.addEventListener('scroll', () => {
 });
 
 backToTopButton.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
