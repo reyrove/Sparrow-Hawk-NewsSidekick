@@ -1,7 +1,6 @@
 import fetch from 'node-fetch';
 
 export default async (req, res) => {
-
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   
@@ -14,7 +13,7 @@ export default async (req, res) => {
     const { q, max = '6' } = req.query;
     
     const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q)}&token=${apiKey}&lang=en&max=${max}`;
-
+    
     res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
     
     const response = await fetch(url);
