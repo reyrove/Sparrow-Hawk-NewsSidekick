@@ -64,7 +64,7 @@ npm start
 
 ## 🌐 Live Demo
 
-Check out the live version at [news-sidekick.vercel.app](https://news-sidekick.vercel.app)
+Check out the live version at [news-sidekick.vercel.app](https://sparrow-hawk-news-sidekick.vercel.app/)
 
 ## 📸 Screenshots
 
