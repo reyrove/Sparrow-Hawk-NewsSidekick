@@ -1,10 +1,23 @@
 {
-  "name": "sparrow",
-  "version": "1.0.0",
-  "dependencies": {
-    "node-fetch": "2.6.7" 
-  },
-  "engines": {
-    "node": ">=16.x"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "*.{html,css,js}",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/style.css",
+      "dest": "/style.css"
+    },
+    {
+      "src": "/(.*)", 
+      "dest": "/index.html"
+    }
+  ]
 }
