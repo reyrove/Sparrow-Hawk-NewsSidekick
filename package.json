@@ -2,9 +2,8 @@
   "name": "sparrow-hawk",
   "version": "1.0.0",
   "private": true,
-  "description": "Sparrow Hawk | News Sidekick - Tech, AI, Web3, Textile & Fun News Aggregator",
   "dependencies": {
-    "node-fetch": "2.6.7"
+    "node-fetch": "2.6.7" 
   },
   "engines": {
     "node": ">=16.x"
