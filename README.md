@@ -95,8 +95,8 @@ This means you're free to:
 **Under these terms**:
 - Attribution: You **must** give appropriate credit to [Reyrove](https://github.com/reyrove)
 - Indicate if changes were made
-- Link to the [original project](https://github.com/reyrove/news-sidekick)
+- Link to the [original project](https://github.com/reyrove/Sparrow-Hawk-NewsSidekick)
 
 ```plaintext
-Copyright (c) 2023 Reyrove
+Copyright (c) 2025 Reyrove
 This work is licensed under CC-BY-4.0
