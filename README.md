@@ -92,17 +92,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## 📜 License (Freedom with Credit)
 
-This project is licensed under the **CC-BY-4.0** (Creative Commons Attribution 4.0 International) license. 
-
-This means you're free to:
-- Share: Copy and redistribute the material
-- Adapt: Remix, transform, and build upon the material
-
-**Under these terms**:
-- Attribution: You **must** give appropriate credit to [Reyrove](https://github.com/reyrove)
-- Indicate if changes were made
-- Link to the [original project](https://github.com/reyrove/Sparrow-Hawk-NewsSidekick)
-
-```plaintext
-Copyright (c) 2025 Reyrove
-This work is licensed under CC-BY-4.0
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
